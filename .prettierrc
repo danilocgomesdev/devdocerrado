@@ -1,0 +1,5 @@
+{
+    "singleQuote": false,
+    "organizeImportsSkipDestructiveCodeActions" : true,
+    "printWidth": 100
+}
