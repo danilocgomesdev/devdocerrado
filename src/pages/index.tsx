@@ -18,6 +18,8 @@ import {
 } from "@chakra-ui/react";
 import { BiMoon, BiSun } from "react-icons/bi";
 import Footer from "../components/Footer";
+import InfoTresColunas from "../components/InfoTresColunas";
+import PrecosTresColunas from "../components/PrecosTresColunas";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -135,7 +137,10 @@ export default function Home() {
             </Box>
           </Flex>
         </Stack>
+        <InfoTresColunas />
+        <PrecosTresColunas />
       </Container>
+
       <Footer />
     </>
   );
