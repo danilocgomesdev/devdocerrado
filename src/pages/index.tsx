@@ -13,14 +13,23 @@ import {
   Stack,
   Text,
   createIcon,
+  useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-
+import { BiMoon, BiSun } from "react-icons/bi";
 import Footer from "../components/Footer";
 
 export default function Home() {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
+      <Box p={1} pr={10} display={"flex"} justifyContent={"end"}>
+        {colorMode === "dark" ? (
+          <BiSun onClick={toggleColorMode} cursor={"pointer"} />
+        ) : (
+          <BiMoon onClick={toggleColorMode} cursor={"pointer"} />
+        )}
+      </Box>
       <Container maxW={"7xl"}>
         <Stack
           align={"center"}
