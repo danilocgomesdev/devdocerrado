@@ -18,7 +18,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Logomarca from "../assets/logoDescricao.svg";
+import Logomarca from "../assets/logoSeca.svg";
 
 interface Props {
   children: React.ReactNode;
@@ -63,7 +63,7 @@ export default function NavBar(props: Props) {
           <HStack spacing={8} alignItems={"center"}>
             <Box>
               {" "}
-              <Image src={Logomarca} width={200} alt="Picture of the author" color="white" />
+              <Image src={Logomarca} width={60} alt="Picture of the author" color="white" />
             </Box>
             <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
               {Links.map((link) => (
