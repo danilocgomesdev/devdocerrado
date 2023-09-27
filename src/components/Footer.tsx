@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   Container,
@@ -12,9 +10,11 @@ import {
   chakra,
   useColorModeValue,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { ReactNode } from "react";
 import { BiMailSend } from "react-icons/bi";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import Logomarca from "../assets/logoDescricao.svg";
 
 const Logo = (props: any) => {
   return (
@@ -83,9 +83,9 @@ export default function Footer() {
         <SimpleGrid templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }} spacing={8}>
           <Stack spacing={6}>
             <Box>
-              <Logo color={useColorModeValue("red.400", "white")} />
+              <Image src={Logomarca} width={200} alt="Picture of the author" color="white" />
             </Box>
-            <Text fontSize={"sm"}>© 2022 Chakra Templates. All rights reserved</Text>
+            <Text fontSize={"sm"}>© 2023 Danilo Gomes. Todos os direitos são Reservados</Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"Twitter"} href={"#"}>
                 <FaTwitter />
@@ -138,7 +138,7 @@ export default function Footer() {
             <ListHeader>Mantenha-se atualizado</ListHeader>
             <Stack direction={"row"}>
               <Input
-                placeholder={"Your email address"}
+                placeholder={"Digite aqui seu e-mail"}
                 bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
                 border={0}
                 _focus={{
@@ -146,10 +146,11 @@ export default function Footer() {
                 }}
               />
               <IconButton
-                bg={useColorModeValue("green.400", "red.400")}
+                bg={useColorModeValue("#88f746", "red.400")}
                 color={useColorModeValue("white", "gray.800")}
                 _hover={{
-                  bg: "red.500",
+                  bg: "black",
+                  color: "#88f746",
                 }}
                 aria-label="Subscribe"
                 icon={<BiMailSend />}
