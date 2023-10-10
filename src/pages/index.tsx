@@ -57,14 +57,14 @@ export default function Home() {
                     position: "absolute",
                     bottom: 1,
                     left: 0,
-                    bg: `${useColorModeValue("light.primary", "dark.primary")}`,
+                    bg: `${useColorModeValue("verde.100", "verde.200")}`,
                     zIndex: -1,
                   }}
                 >
                   Escreva uma vez,
                 </Text>
                 <br />
-                <Text as={"span"} color={useColorModeValue("light.primary", "dark.primary")}>
+                <Text as={"span"} color={useColorModeValue("verde.200", "verde.200")}>
                   use em qualquer lugar!
                 </Text>
               </Heading>
@@ -79,8 +79,8 @@ export default function Home() {
                   size={"lg"}
                   fontWeight={"normal"}
                   px={6}
-                  bg={useColorModeValue("light.primary", "dark.primary")}
-                  _hover={{ bg: "hoverColor" }}
+                  bg={useColorModeValue("verde.300", "verde.200")}
+                  _hover={{ bg: `${useColorModeValue("verde.300", "verde.100")}`, color: "black" }}
                 >
                   Get started
                 </Button>
@@ -103,7 +103,8 @@ export default function Home() {
                 top={"-20%"}
                 left={0}
                 zIndex={-1}
-                color={useColorModeValue("red.50", "red.400")}
+                opacity={0.9}
+                color={useColorModeValue("green.50", "verde.300")}
               />
               <Box
                 position={"relative"}

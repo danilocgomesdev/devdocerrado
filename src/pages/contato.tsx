@@ -169,11 +169,11 @@ export default function Contato() {
                   </FormControl>
 
                   <Button
-                    colorScheme="blue"
-                    bg={useColorModeValue("light.primary", "dark.primary")}
+                    colorScheme="green"
+                    bg={useColorModeValue("verde.400", "verde.200")}
                     color="black"
                     _hover={{
-                      bg: "hoverColor",
+                      bg: "verde.300",
                     }}
                     width="full"
                   >
