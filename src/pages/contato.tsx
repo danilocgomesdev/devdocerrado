@@ -170,10 +170,10 @@ export default function Contato() {
 
                   <Button
                     colorScheme="blue"
-                    bg="blue.400"
-                    color="white"
+                    bg={useColorModeValue("light.primary", "dark.primary")}
+                    color="black"
                     _hover={{
-                      bg: "blue.500",
+                      bg: "hoverColor",
                     }}
                     width="full"
                   >

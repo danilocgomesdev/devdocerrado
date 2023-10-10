@@ -57,14 +57,14 @@ export default function Home() {
                     position: "absolute",
                     bottom: 1,
                     left: 0,
-                    bg: "red.400",
+                    bg: `${useColorModeValue("light.primary", "dark.primary")}`,
                     zIndex: -1,
                   }}
                 >
                   Escreva uma vez,
                 </Text>
                 <br />
-                <Text as={"span"} color={"red.400"}>
+                <Text as={"span"} color={useColorModeValue("light.primary", "dark.primary")}>
                   use em qualquer lugar!
                 </Text>
               </Heading>
@@ -79,9 +79,8 @@ export default function Home() {
                   size={"lg"}
                   fontWeight={"normal"}
                   px={6}
-                  colorScheme={"red"}
-                  bg={"red.400"}
-                  _hover={{ bg: "red.500" }}
+                  bg={useColorModeValue("light.primary", "dark.primary")}
+                  _hover={{ bg: "hoverColor" }}
                 >
                   Get started
                 </Button>
