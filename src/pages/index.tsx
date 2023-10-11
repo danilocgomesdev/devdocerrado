@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   Button,
@@ -103,7 +101,7 @@ export default function Home() {
                 top={"-20%"}
                 left={0}
                 zIndex={-1}
-                color={useColorModeValue("red.50", "red.400")}
+                color={useColorModeValue("green.50", "green.400")}
               />
               <Box
                 position={"relative"}
