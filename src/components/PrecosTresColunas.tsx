@@ -87,7 +87,7 @@ export default function PrecosTresColunas() {
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
+              <Button w="full" colorScheme="green" variant="outline">
                 Start trial
               </Button>
             </Box>
@@ -104,7 +104,7 @@ export default function PrecosTresColunas() {
             >
               <Text
                 textTransform="uppercase"
-                bg={useColorModeValue("red.300", "red.700")}
+                bg={useColorModeValue("verde.100", "verde.300")}
                 px={3}
                 py={1}
                 color={useColorModeValue("gray.900", "gray.300")}
@@ -155,7 +155,7 @@ export default function PrecosTresColunas() {
                 </ListItem>
               </List>
               <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="red">
+                <Button w="full" bg={useColorModeValue("verde.100", "verde.300")}>
                   Start trial
                 </Button>
               </Box>
@@ -195,7 +195,7 @@ export default function PrecosTresColunas() {
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
+              <Button w="full" colorScheme="green" variant="outline">
                 Start trial
               </Button>
             </Box>

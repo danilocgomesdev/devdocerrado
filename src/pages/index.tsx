@@ -11,27 +11,17 @@ import {
   Stack,
   Text,
   createIcon,
-  useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { BiMoon, BiSun } from "react-icons/bi";
 import Footer from "../components/Footer";
 import InfoTresColunas from "../components/InfoTresColunas";
 import NavBar from "../components/NavBar";
 import PrecosTresColunas from "../components/PrecosTresColunas";
 
 export default function Home() {
-  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
       <NavBar>
-        <Box p={1} pr={10} display={"flex"} justifyContent={"end"}>
-          {colorMode === "dark" ? (
-            <BiSun onClick={toggleColorMode} cursor={"pointer"} />
-          ) : (
-            <BiMoon onClick={toggleColorMode} cursor={"pointer"} />
-          )}
-        </Box>
         <Container maxW={"7xl"}>
           <Stack
             align={"center"}
@@ -55,14 +45,14 @@ export default function Home() {
                     position: "absolute",
                     bottom: 1,
                     left: 0,
-                    bg: `${useColorModeValue("light.primary", "dark.primary")}`,
+                    bg: `${useColorModeValue("verde.100", "verde.300")}`,
                     zIndex: -1,
                   }}
                 >
                   Escreva uma vez,
                 </Text>
                 <br />
-                <Text as={"span"} color={useColorModeValue("light.primary", "dark.primary")}>
+                <Text as={"span"} color={useColorModeValue("verde.100", "verde.300")}>
                   use em qualquer lugar!
                 </Text>
               </Heading>
@@ -77,7 +67,7 @@ export default function Home() {
                   size={"lg"}
                   fontWeight={"normal"}
                   px={6}
-                  bg={useColorModeValue("light.primary", "dark.primary")}
+                  bg={useColorModeValue("verde.100", "verde.300")}
                   _hover={{ bg: "hoverColor" }}
                 >
                   Get started
@@ -102,7 +92,7 @@ export default function Home() {
                 left={0}
                 zIndex={-1}
                 opacity={0.9}
-                color={useColorModeValue("green.50", "verde.300")}
+                color={useColorModeValue("verde.100", "verde.300")}
               />
               <Box
                 position={"relative"}
