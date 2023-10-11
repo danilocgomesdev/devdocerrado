@@ -101,7 +101,8 @@ export default function Home() {
                 top={"-20%"}
                 left={0}
                 zIndex={-1}
-                color={useColorModeValue("green.50", "green.400")}
+                opacity={0.9}
+                color={useColorModeValue("green.50", "verde.300")}
               />
               <Box
                 position={"relative"}
