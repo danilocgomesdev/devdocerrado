@@ -130,9 +130,8 @@ export default function Home() {
           <InfoTresColunas />
           <PrecosTresColunas />
         </Container>
-
-        <Footer />
       </NavBar>
+      <Footer />
     </>
   );
 }
