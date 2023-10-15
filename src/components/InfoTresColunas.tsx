@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Icon, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Icon, SimpleGrid, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { ReactElement } from "react";
 import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc";
 
@@ -20,13 +20,13 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         justify={"center"}
         color={"white"}
         rounded={"full"}
-        bg={"gray.100"}
+        bg={"cinza.100"}
         mb={1}
       >
         {icon}
       </Flex>
       <Text fontWeight={600}>{title}</Text>
-      <Text color={"gray.600"}>{text}</Text>
+      <Text color={useColorModeValue("cinza.400", "cinza.200")}>{text}</Text>
     </Stack>
   );
 };

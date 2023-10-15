@@ -45,19 +45,20 @@ const SocialButton = ({
   return (
     <chakra.button
       bg={useColorModeValue("verde.100", "verde.100")}
-      color={"verde.800"}
+      color={"cinza.50"}
       rounded={"full"}
       w={8}
       h={8}
       cursor={"pointer"}
       as={"a"}
       href={href}
+      bgColor={"verde.600"}
       display={"inline-flex"}
       alignItems={"center"}
       justifyContent={"center"}
       transition={"background 0.3s ease"}
       _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+        bg: "verde.700",
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
@@ -78,8 +79,8 @@ export default function Footer() {
   const { colorMode } = useColorMode();
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
-      color={useColorModeValue("gray.700", "gray.200")}
+      bg={useColorModeValue("cinza.50", "cinza.700")}
+      color={useColorModeValue("cinza.700", "cinza.200")}
       bottom={0}
       w={"100%"}
     >
@@ -147,19 +148,17 @@ export default function Footer() {
             <Stack direction={"row"}>
               <Input
                 placeholder={"Digite aqui seu e-mail"}
-                bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+                bg={useColorModeValue("cinza.100", "cinza.400")}
                 border={0}
                 _focus={{
-                  bg: "whiteAlpha.300",
+                  bg: "cinza.500",
                 }}
               />
               <IconButton
-                bg={"verde.100"}
-                color={"verde.800"}
+                bg={"verde.600"}
+                color={"cinza.50"}
                 _hover={{
-                  bg: "verde.800",
-                  color: "verde.100",
-                  opacity: 0.9,
+                  bg: "verde.700",
                 }}
                 aria-label="Subscribe"
                 icon={<BiMailSend />}

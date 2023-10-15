@@ -31,7 +31,7 @@ const NavLink = (props: Props) => {
       rounded={"md"}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
+        bg: useColorModeValue("cinza.100", "cinza.600"),
       }}
       href={"#"}
     >
@@ -45,7 +45,7 @@ export default function NavBar(props: Props) {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={10}>
+      <Box bg={useColorModeValue("cinza.50", "cinza.700")} px={10}>
         <Container as={Stack} maxW={"7xl"}>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
             <IconButton
@@ -72,16 +72,14 @@ export default function NavBar(props: Props) {
               borderRadius={5}
               display={"flex"}
               justifyContent={"end"}
+              onClick={toggleColorMode}
+              cursor={"pointer"}
               _hover={{
                 textDecoration: "none",
-                bg: useColorModeValue("gray.200", "gray.700"),
+                bg: useColorModeValue("cinza.100", "cinza.600"),
               }}
             >
-              {colorMode === "dark" ? (
-                <BiSun onClick={toggleColorMode} cursor={"pointer"} />
-              ) : (
-                <BiMoon onClick={toggleColorMode} cursor={"pointer"} />
-              )}
+              {colorMode === "dark" ? <BiSun /> : <BiMoon />}
             </Box>
           </Flex>
 
