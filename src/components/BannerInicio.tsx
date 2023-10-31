@@ -11,9 +11,11 @@ import {
   Text,
   createIcon,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 
 export default function BannerInicio() {
+  const [isTablet] = useMediaQuery("(max-width: 600px)");
   return (
     <Stack
       align={"center"}
@@ -74,16 +76,18 @@ export default function BannerInicio() {
         </Stack>
       </Stack>
       <Flex flex={1} justify={"center"} align={"center"} position={"relative"} w={"full"}>
-        <Blob
-          w={"150%"}
-          h={"150%"}
-          position={"absolute"}
-          top={"-20%"}
-          left={0}
-          zIndex={-1}
-          opacity={0.9}
-          color="verde.600"
-        />
+        {isTablet ? null : (
+          <Blob
+            w={"150%"}
+            h={"150%"}
+            position={"absolute"}
+            top={"-20%"}
+            left={0}
+            zIndex={-1}
+            opacity={0.9}
+            color="verde.600"
+          />
+        )}
         <Box
           position={"relative"}
           height={"300px"}
