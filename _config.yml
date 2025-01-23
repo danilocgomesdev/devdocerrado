@@ -1,1 +1,19 @@
-sass: ~
+# Configuração do Jekyll para evitar erros no GitHub Pages:
+sass:
+  style: compressed
+
+# Diretório fonte correto:
+source: docs
+
+# Dependências do Jekyll
+gems:
+  - jekyll-sass-converter
+
+# Excluir arquivos que não devem ser processados:
+exclude:
+  - .nojekyll
+  - node_modules
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - .gitignore
